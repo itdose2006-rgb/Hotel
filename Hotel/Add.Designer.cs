@@ -39,7 +39,7 @@
             this.tx6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txph = new Guna.UI2.WinForms.Guna2TextBox();
             this.txus = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.butadd = new Guna.UI2.WinForms.Guna2Button();
             this.txcom = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ch = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.txpa = new Guna.UI2.WinForms.Guna2TextBox();
@@ -77,7 +77,7 @@
             this.guna2GroupBox1.Controls.Add(this.tx6);
             this.guna2GroupBox1.Controls.Add(this.txph);
             this.guna2GroupBox1.Controls.Add(this.txus);
-            this.guna2GroupBox1.Controls.Add(this.guna2Button1);
+            this.guna2GroupBox1.Controls.Add(this.butadd);
             this.guna2GroupBox1.Controls.Add(this.txcom);
             this.guna2GroupBox1.Controls.Add(this.ch);
             this.guna2GroupBox1.Controls.Add(this.txpa);
@@ -85,13 +85,13 @@
             this.guna2GroupBox1.FillColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 55);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(18, 64);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(292, 621);
             this.guna2GroupBox1.TabIndex = 12;
             this.guna2GroupBox1.Text = "تسجيل الدخول";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click_1);
+            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click_2);
             // 
             // guna2Button3
             // 
@@ -312,22 +312,23 @@
             this.txus.TabIndex = 13;
             this.txus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2Button1
+            // butadd
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Aquamarine;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(14, 557);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(156, 44);
-            this.guna2Button1.TabIndex = 7;
-            this.guna2Button1.Text = "اضافة";
+            this.butadd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.butadd.BorderRadius = 8;
+            this.butadd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butadd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butadd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butadd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butadd.FillColor = System.Drawing.Color.Aquamarine;
+            this.butadd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.butadd.ForeColor = System.Drawing.Color.Black;
+            this.butadd.Location = new System.Drawing.Point(14, 557);
+            this.butadd.Name = "butadd";
+            this.butadd.Size = new System.Drawing.Size(156, 44);
+            this.butadd.TabIndex = 7;
+            this.butadd.Text = "اضافة";
+            this.butadd.Click += new System.EventHandler(this.butadd_Click);
             // 
             // txcom
             // 
@@ -407,7 +408,6 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "Add";
             this.Size = new System.Drawing.Size(1132, 749);
-            this.Load += new System.EventHandler(this.Add_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -415,6 +415,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
@@ -426,7 +427,7 @@
         private Guna.UI2.WinForms.Guna2TextBox tx6;
         private Guna.UI2.WinForms.Guna2TextBox txph;
         private Guna.UI2.WinForms.Guna2TextBox txus;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button butadd;
         private Guna.UI2.WinForms.Guna2ComboBox txcom;
         private Guna.UI2.WinForms.Guna2CustomCheckBox ch;
         private Guna.UI2.WinForms.Guna2TextBox txpa;

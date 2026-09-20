@@ -1,3 +1,4 @@
+﻿
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ namespace Hotel
 {
     public partial class Add : UserControl
     {
-       SqlConnection cn = new SqlConnection(@"server= THEBest\SQLEXPRESS ; DataBase=hotel ; Integrated Security =true");
+        SqlConnection cn = new SqlConnection(@"server= THEBest\SQLEXPRESS ; DataBase=hotel ; Integrated Security =true");
         public Add()
         {
             InitializeComponent();
@@ -45,20 +46,6 @@ namespace Hotel
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-           try
-            {
-                cn.Open();
-
-                SqlCommand ad=new SqlCommand("insert into emp (name,phone,username,pass,gen,active) Values ('akaza ','780121263','amam','soso','main',1)", cn);
-                ad.ExecuteNonQuery();
-              
-             
-            }
-            catch(SqlException ex) {
-                MessageBox.Show(ex .Message);
-            
-            }
-            cn.Close();
 
 
         }
@@ -69,7 +56,7 @@ namespace Hotel
         }
 
 
-       
+
 
         private void guna2GroupBox1_Click_1(object sender, EventArgs e)
         {
@@ -83,7 +70,34 @@ namespace Hotel
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void butadd_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                cn.Open();
+
+                SqlCommand ad = new SqlCommand("insert into emp (name,phone,username,pass,gen,active) Values ('سادق','780121263','amam','soso','main',1)", cn);
+                ad.ExecuteNonQuery();
+                MessageBox.Show("add successfully", "add", MessageBoxButtons.OK);
+
+
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            cn.Close();
+        }
+
+        private void guna2GroupBox1_Click_2(object sender, EventArgs e)
+        {
 
         }
     }
-}
+};

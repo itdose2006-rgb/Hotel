@@ -1,6 +1,6 @@
 ﻿namespace Hotel
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ch = new Guna.UI2.WinForms.Guna2CustomCheckBox();
@@ -172,7 +173,6 @@
             this.txuer.Size = new System.Drawing.Size(326, 48);
             this.txuer.TabIndex = 0;
             this.txuer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txuer.TextChanged += new System.EventHandler(this.txuer_TextChanged);
             // 
             // guna2PictureBox1
             // 
@@ -186,15 +186,17 @@
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(983, 738);
             this.Controls.Add(this.guna2GroupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Login";
+            this.Text = "Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();

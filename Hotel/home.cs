@@ -20,7 +20,7 @@ namespace Hotel
     {
         
 
-        
+
         SqlConnection cn = new SqlConnection(@"Server=THEBest\SQLEXPRESS ; DataBase=hotel  ; Integrated Security=true");
 
         public home()
@@ -30,18 +30,27 @@ namespace Hotel
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-       
+
+        // دالة مسؤولة عن إخفاء الزر الخاص بالمدير
+        public void showButton()
+        {
+            // ضع هنا اسم الزر الحقيقي لديك (مثلاً button1 أو زر الإدارة)
+           addemp.Visible = false;
+        }
 
 
-        
 
-      
-        private void addusercontrol(UserControl userControl)
+
+
+
+
+        public void addusercontrol(UserControl userControl)
         {
             userControl.Dock=DockStyle.Fill;
+            userControl.AutoScroll= true;
             motherpanel.Controls.Clear();
             motherpanel.Controls.Add(userControl);
             userControl.BringToFront();
@@ -87,10 +96,16 @@ namespace Hotel
 
         }
 
+        public void ching()
+        {
+
+            addemp.Visible = true;
+        }
         private void addemp_Click(object sender, EventArgs e)
         {
             Add ad = new Add();
             addusercontrol(ad);
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -110,8 +125,31 @@ namespace Hotel
 
             }
         }
+      
+            private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        }
+
+        private void roomsbut_Click(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomsbut_Click_1(object sender, EventArgs e)
+        {
+            room ad = new room();
+            addusercontrol(ad);
+
+        }
+
+        private void guna2Panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

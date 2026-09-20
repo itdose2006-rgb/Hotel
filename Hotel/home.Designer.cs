@@ -115,15 +115,16 @@
             // 
             // guna2Button3
             // 
+            resources.ApplyResources(this.guna2Button3, "guna2Button3");
+            this.guna2Button3.AutoRoundedCorners = true;
             this.guna2Button3.BorderColor = System.Drawing.Color.Aquamarine;
-            this.guna2Button3.BorderRadius = 5;
+            this.guna2Button3.BorderRadius = 21;
             this.guna2Button3.BorderThickness = 1;
             this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.FillColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.guna2Button3, "guna2Button3");
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -144,6 +145,9 @@
             // 
             // addemp
             // 
+            resources.ApplyResources(this.addemp, "addemp");
+            this.addemp.AllowDrop = true;
+            this.addemp.Animated = true;
             this.addemp.BorderColor = System.Drawing.SystemColors.Control;
             this.addemp.BorderRadius = 5;
             this.addemp.BorderThickness = 1;
@@ -152,7 +156,6 @@
             this.addemp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addemp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.addemp.FillColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.addemp, "addemp");
             this.addemp.ForeColor = System.Drawing.Color.White;
             this.addemp.Name = "addemp";
             this.addemp.Click += new System.EventHandler(this.addemp_Click);
@@ -171,6 +174,7 @@
             resources.ApplyResources(this.roomsbut, "roomsbut");
             this.roomsbut.ForeColor = System.Drawing.Color.White;
             this.roomsbut.Name = "roomsbut";
+            this.roomsbut.Click += new System.EventHandler(this.roomsbut_Click_1);
             // 
             // guna2PictureBox1
             // 
@@ -186,7 +190,7 @@
             this.guna2Panel1.Controls.Add(this.guna2TextBox1);
             resources.ApplyResources(this.guna2Panel1, "guna2Panel1");
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint_1);
             // 
             // guna2TextBox1
             // 
@@ -224,6 +228,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "home";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -233,7 +238,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button pbut;
         private Guna.UI2.WinForms.Guna2Button ganahbut;
@@ -243,7 +247,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Panel motherpanel;
-        private Guna.UI2.WinForms.Guna2Button addemp;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        public Guna.UI2.WinForms.Guna2Button addemp;
+        public Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
     }
 }

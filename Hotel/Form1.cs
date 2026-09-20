@@ -9,15 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Windows;
+using System.Data;
+using System.Web.UI;
+using Hotel;
+using static Hotel.home;
 
 namespace Hotel
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
 
     {
-
-        SqlConnection cn = new SqlConnection(@"Server=THEBest\SQLEXPRESS ; DataBase=hotel  ; Integrated securty=true");
-        public Form1()
+         
+        
+            
+        
+        SqlConnection cn = new SqlConnection(@"Server=THEBest\SQLEXPRESS ; DataBase=hotel  ; Integrated Security=true");
+        public Login()
         {
             InitializeComponent();
         }
@@ -71,43 +79,97 @@ namespace Hotel
 
         private void bulogen_Click(object sender, EventArgs e)
         {
-           
-         
-           
-           /* try
+            string usern=txuer.Text;
+            string pass=txpass.Text;
+            if(usern == "" || pass =="")
             {
+               System.Windows.MessageBox.Show("الحقل فارغ","خطاء",MessageBoxButton.OK);
+            };
 
+            try
+            {
                 cn.Open();
-                string usna = txuer.Text;
-                string pas = txpass.Text;
-                SqlCommand cm = new SqlCommand(" SELECT * from emp WHERE username ='" + usna + "' AND pass = '" + pas + "' AND active = 1", cn);
-                cm.ExecuteNonQuery();
+                SqlDataAdapter cm = new SqlDataAdapter("exec loginn '"+usern+"', '"+pass+"' ",cn);
+                DataTable dt =new DataTable();
+                cm.Fill(dt);
 
-                cn.Close();
+                if (dt.Rows.Count > 0)
+                {
+                    string n = dt.Rows[0]["username"].ToString();
+                    string p = dt.Rows[0]["pass"].ToString();
+                    string admin = dt.Rows[0]["admin"].ToString();
 
+                    if (admin == "1")
+                    {
+                        System.Windows.MessageBox.Show("مرحبا بك يامدير" + n, "Admin", MessageBoxButton.OK);
+                        home homeForm = new home();
+                        homeForm.Show();
+
+
+
+                    }
+                    else
+                    {
+                        System.Windows.MessageBox.Show("مرحبا " + n, "User", MessageBoxButton.OK);
+                        home homeForm = new home();
+                        homeForm.Show();
+                        homeForm.showButton();
+
+
+
+
+
+
+
+                    }
+
+
+
+
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("كلمة المرور او اسم المستخدم خطاء " , "خطاء", MessageBoxButton.OK);
+
+                    
+
+                }
 
 
 
             }
-
-
-
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+
+
+                System.Windows.MessageBox.Show(ex.Message);
+
+
+
+
+
+
             }
             finally
             {
-
                 cn.Close();
 
-            }*/
+
+
+            }
+
+
+
+
 
         }
 
-        private void txuer_TextChanged(object sender, EventArgs e)
-        {
+
+
+
 
         }
+
+      
     }
-}
+
