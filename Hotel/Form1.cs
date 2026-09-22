@@ -98,6 +98,7 @@ namespace Hotel
                     string n = dt.Rows[0]["username"].ToString();
                     string p = dt.Rows[0]["pass"].ToString();
                     string admin = dt.Rows[0]["admin"].ToString();
+                    string active = dt.Rows[0]["active"].ToString();
 
                     if (admin == "1")
                     {
