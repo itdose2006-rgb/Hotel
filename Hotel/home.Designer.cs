@@ -37,13 +37,13 @@
             this.combut = new Guna.UI2.WinForms.Guna2Button();
             this.addemp = new Guna.UI2.WinForms.Guna2Button();
             this.roomsbut = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.motherpanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -98,6 +98,7 @@
             resources.ApplyResources(this.pbut, "pbut");
             this.pbut.ForeColor = System.Drawing.Color.White;
             this.pbut.Name = "pbut";
+            this.pbut.Click += new System.EventHandler(this.pbut_Click);
             // 
             // ganahbut
             // 
@@ -124,9 +125,10 @@
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button3.FillColor = System.Drawing.Color.Black;
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // combut
@@ -176,15 +178,6 @@
             this.roomsbut.Name = "roomsbut";
             this.roomsbut.Click += new System.EventHandler(this.roomsbut_Click_1);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Hotel.Properties.Resources.Screenshot_2026_08_23_022509;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            resources.ApplyResources(this.guna2PictureBox1, "guna2PictureBox1");
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.guna2TextBox1);
@@ -219,6 +212,15 @@
             this.motherpanel.Name = "motherpanel";
             this.motherpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.motherpanel_Paint);
             // 
+            // guna2PictureBox1
+            // 
+            resources.ApplyResources(this.guna2PictureBox1, "guna2PictureBox1");
+            this.guna2PictureBox1.Image = global::Hotel.Properties.Resources.Screenshot_2026_08_23_022509;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // home
             // 
             resources.ApplyResources(this, "$this");
@@ -231,8 +233,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.guna2GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

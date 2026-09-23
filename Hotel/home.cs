@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 
 namespace Hotel
@@ -30,7 +31,8 @@ namespace Hotel
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            report ad = new report();
+            addusercontrol((ad));
         }
 
 
@@ -78,7 +80,8 @@ namespace Hotel
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
+            AboutuUs ad = new AboutuUs();
+            addusercontrol(ad);
         }
 
         private void minbut_MouseHover(object sender, EventArgs e)
@@ -110,20 +113,8 @@ namespace Hotel
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                cn.Open();
-
-                SqlCommand ad = new SqlCommand("insert into emp (name,phone,username,pass,gen,active) Values ('saeme ','780121263','amam','soso','main',1)", cn);
-                ad.ExecuteNonQuery();
-                cn.Close();
-                
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+            report ad=new report();
+            addusercontrol((ad));
         }
       
             private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -152,6 +143,13 @@ namespace Hotel
         private void guna2Panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pbut_Click(object sender, EventArgs e)
+        {
+
+            apartment ad = new apartment();
+            addusercontrol(ad);
         }
     }
 }
