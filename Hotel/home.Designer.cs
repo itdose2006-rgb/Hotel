@@ -37,13 +37,13 @@
             this.combut = new Guna.UI2.WinForms.Guna2Button();
             this.addemp = new Guna.UI2.WinForms.Guna2Button();
             this.roomsbut = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.motherpanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -178,6 +178,15 @@
             this.roomsbut.Name = "roomsbut";
             this.roomsbut.Click += new System.EventHandler(this.roomsbut_Click_1);
             // 
+            // guna2PictureBox1
+            // 
+            resources.ApplyResources(this.guna2PictureBox1, "guna2PictureBox1");
+            this.guna2PictureBox1.Image = global::Hotel.Properties.Resources.Screenshot_2026_08_23_022509;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.guna2TextBox1);
@@ -212,20 +221,11 @@
             this.motherpanel.Name = "motherpanel";
             this.motherpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.motherpanel_Paint);
             // 
-            // guna2PictureBox1
-            // 
-            resources.ApplyResources(this.guna2PictureBox1, "guna2PictureBox1");
-            this.guna2PictureBox1.Image = global::Hotel.Properties.Resources.Screenshot_2026_08_23_022509;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
             // home
             // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.motherpanel);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2GroupBox1);
@@ -233,8 +233,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

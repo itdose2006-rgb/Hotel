@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txserch = new Guna.UI2.WinForms.Guna2TextBox();
             this.txact = new Guna.UI2.WinForms.Guna2ComboBox();
             this.butdelete = new Guna.UI2.WinForms.Guna2Button();
             this.butupdate = new Guna.UI2.WinForms.Guna2Button();
@@ -44,6 +45,7 @@
             this.ch = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.txpa = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.butserch = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Akhbar MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(166, -7);
+            this.label1.Location = new System.Drawing.Point(189, -18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 42);
             this.label1.TabIndex = 11;
@@ -69,6 +71,8 @@
             this.guna2GroupBox1.BackgroundImage = global::Hotel.Properties.Resources.MacBook_Pro_16____2;
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.Red;
             this.guna2GroupBox1.BorderRadius = 20;
+            this.guna2GroupBox1.Controls.Add(this.butserch);
+            this.guna2GroupBox1.Controls.Add(this.txserch);
             this.guna2GroupBox1.Controls.Add(this.txact);
             this.guna2GroupBox1.Controls.Add(this.butdelete);
             this.guna2GroupBox1.Controls.Add(this.butupdate);
@@ -89,10 +93,35 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(18, 64);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(489, 621);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(535, 621);
             this.guna2GroupBox1.TabIndex = 12;
             this.guna2GroupBox1.Text = "تسجيل الدخول";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txserch
+            // 
+            this.txserch.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txserch.BorderRadius = 7;
+            this.txserch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txserch.DefaultText = "";
+            this.txserch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txserch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txserch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txserch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txserch.FillColor = System.Drawing.Color.Black;
+            this.txserch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txserch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txserch.ForeColor = System.Drawing.Color.White;
+            this.txserch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txserch.Location = new System.Drawing.Point(40, 44);
+            this.txserch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txserch.Name = "txserch";
+            this.txserch.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txserch.PlaceholderText = "بحث";
+            this.txserch.SelectedText = "";
+            this.txserch.Size = new System.Drawing.Size(359, 47);
+            this.txserch.TabIndex = 23;
+            this.txserch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txact
             // 
@@ -111,7 +140,7 @@
             this.txact.Items.AddRange(new object[] {
             "مفعل",
             "محضور"});
-            this.txact.Location = new System.Drawing.Point(61, 365);
+            this.txact.Location = new System.Drawing.Point(84, 365);
             this.txact.Name = "txact";
             this.txact.Size = new System.Drawing.Size(229, 36);
             this.txact.StartIndex = 0;
@@ -129,7 +158,7 @@
             this.butdelete.FillColor = System.Drawing.Color.Aquamarine;
             this.butdelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.butdelete.ForeColor = System.Drawing.Color.Black;
-            this.butdelete.Location = new System.Drawing.Point(286, 476);
+            this.butdelete.Location = new System.Drawing.Point(309, 476);
             this.butdelete.Name = "butdelete";
             this.butdelete.Size = new System.Drawing.Size(156, 44);
             this.butdelete.TabIndex = 21;
@@ -147,7 +176,7 @@
             this.butupdate.FillColor = System.Drawing.Color.Aquamarine;
             this.butupdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.butupdate.ForeColor = System.Drawing.Color.Black;
-            this.butupdate.Location = new System.Drawing.Point(286, 556);
+            this.butupdate.Location = new System.Drawing.Point(309, 556);
             this.butupdate.Name = "butupdate";
             this.butupdate.Size = new System.Drawing.Size(156, 44);
             this.butupdate.TabIndex = 20;
@@ -165,7 +194,7 @@
             this.chekadmin.CheckMarkColor = System.Drawing.Color.Aquamarine;
             this.chekadmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chekadmin.ForeColor = System.Drawing.Color.White;
-            this.chekadmin.Location = new System.Drawing.Point(-15, 365);
+            this.chekadmin.Location = new System.Drawing.Point(8, 365);
             this.chekadmin.Name = "chekadmin";
             this.chekadmin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chekadmin.Size = new System.Drawing.Size(71, 32);
@@ -175,6 +204,7 @@
             this.chekadmin.UncheckedState.BorderRadius = 0;
             this.chekadmin.UncheckedState.BorderThickness = 0;
             this.chekadmin.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.chekadmin.CheckedChanged += new System.EventHandler(this.chekadmin_CheckedChanged);
             // 
             // txid
             // 
@@ -193,7 +223,7 @@
             this.txid.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txid.ForeColor = System.Drawing.Color.White;
             this.txid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txid.Location = new System.Drawing.Point(-173, 108);
+            this.txid.Location = new System.Drawing.Point(-150, 108);
             this.txid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txid.MaxLength = 100;
             this.txid.Name = "txid";
@@ -203,6 +233,7 @@
             this.txid.Size = new System.Drawing.Size(420, 48);
             this.txid.TabIndex = 17;
             this.txid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txid.TextChanged += new System.EventHandler(this.txid_TextChanged);
             // 
             // txn
             // 
@@ -221,7 +252,7 @@
             this.txn.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txn.ForeColor = System.Drawing.Color.White;
             this.txn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txn.Location = new System.Drawing.Point(266, 108);
+            this.txn.Location = new System.Drawing.Point(289, 108);
             this.txn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txn.MaxLength = 100;
             this.txn.Name = "txn";
@@ -231,6 +262,7 @@
             this.txn.Size = new System.Drawing.Size(407, 48);
             this.txn.TabIndex = 16;
             this.txn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txn.TextChanged += new System.EventHandler(this.txn_TextChanged);
             // 
             // txpa2
             // 
@@ -249,7 +281,7 @@
             this.txpa2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txpa2.ForeColor = System.Drawing.Color.White;
             this.txpa2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txpa2.Location = new System.Drawing.Point(-173, 269);
+            this.txpa2.Location = new System.Drawing.Point(-150, 269);
             this.txpa2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txpa2.MaxLength = 8;
             this.txpa2.Name = "txpa2";
@@ -278,7 +310,7 @@
             this.txph.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txph.ForeColor = System.Drawing.Color.White;
             this.txph.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txph.Location = new System.Drawing.Point(266, 269);
+            this.txph.Location = new System.Drawing.Point(289, 269);
             this.txph.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txph.MaxLength = 12;
             this.txph.Name = "txph";
@@ -306,7 +338,7 @@
             this.txus.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txus.ForeColor = System.Drawing.Color.White;
             this.txus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txus.Location = new System.Drawing.Point(269, 187);
+            this.txus.Location = new System.Drawing.Point(292, 187);
             this.txus.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txus.MaxLength = 8;
             this.txus.Name = "txus";
@@ -328,7 +360,7 @@
             this.butadd.FillColor = System.Drawing.Color.Aquamarine;
             this.butadd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.butadd.ForeColor = System.Drawing.Color.Black;
-            this.butadd.Location = new System.Drawing.Point(112, 557);
+            this.butadd.Location = new System.Drawing.Point(135, 557);
             this.butadd.Name = "butadd";
             this.butadd.Size = new System.Drawing.Size(156, 44);
             this.butadd.TabIndex = 7;
@@ -352,7 +384,7 @@
             this.txcom.Items.AddRange(new object[] {
             "ذكر ",
             "انثا"});
-            this.txcom.Location = new System.Drawing.Point(312, 365);
+            this.txcom.Location = new System.Drawing.Point(335, 365);
             this.txcom.Name = "txcom";
             this.txcom.Size = new System.Drawing.Size(229, 36);
             this.txcom.StartIndex = 0;
@@ -367,7 +399,7 @@
             this.ch.CheckedState.BorderThickness = 0;
             this.ch.CheckedState.FillColor = System.Drawing.Color.Aquamarine;
             this.ch.CheckMarkColor = System.Drawing.Color.Black;
-            this.ch.Location = new System.Drawing.Point(-54, 280);
+            this.ch.Location = new System.Drawing.Point(-31, 280);
             this.ch.Name = "ch";
             this.ch.Size = new System.Drawing.Size(25, 21);
             this.ch.TabIndex = 8;
@@ -394,7 +426,7 @@
             this.txpa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txpa.ForeColor = System.Drawing.Color.White;
             this.txpa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txpa.Location = new System.Drawing.Point(-173, 187);
+            this.txpa.Location = new System.Drawing.Point(-150, 187);
             this.txpa.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txpa.MaxLength = 8;
             this.txpa.Name = "txpa";
@@ -418,6 +450,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(523, 660);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // butserch
+            // 
+            this.butserch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.butserch.BorderRadius = 8;
+            this.butserch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butserch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butserch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butserch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butserch.FillColor = System.Drawing.Color.Aquamarine;
+            this.butserch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.butserch.ForeColor = System.Drawing.Color.Black;
+            this.butserch.Location = new System.Drawing.Point(11, 47);
+            this.butserch.Name = "butserch";
+            this.butserch.Size = new System.Drawing.Size(156, 44);
+            this.butserch.TabIndex = 24;
+            this.butserch.Text = "بحث";
+            this.butserch.Click += new System.EventHandler(this.butserch_Click);
             // 
             // Add
             // 
@@ -454,5 +504,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txpa;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2ComboBox txact;
+        private Guna.UI2.WinForms.Guna2TextBox txserch;
+        private Guna.UI2.WinForms.Guna2Button butserch;
     }
 }

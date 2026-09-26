@@ -292,7 +292,66 @@ namespace Hotel
             }
         }
 
-    
+        private void chekadmin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butserch_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                txid.Enabled = false;
+
+                cn.Open();
+                SqlCommand sr = new SqlCommand(" select * from emp where name = '" + txserch.Text + "'", cn);
+                SqlDataReader dr;
+                dr = sr.ExecuteReader();
+                dr.Read();
+                txid.Text = dr[0].ToString();
+
+                txn.Text = dr[1].ToString();
+                txph.Text = dr[2].ToString();
+                txus.Text = dr[3].ToString();
+                txpa.Text = dr[4].ToString();
+                txcom.Text = dr[5].ToString();
+                dr.Close();
+
+                MessageBox.Show(" successfully found", "Update", MessageBoxButtons.OK);
+                
+
+
+
+
+
+
+            }
+
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+                cn.Close();
+
+            }
+
+        }
+
+        private void txid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }; 

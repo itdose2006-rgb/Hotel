@@ -45,7 +45,7 @@ namespace Hotel
 
         private void gunaLinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("www.googel.com");
+            Process.Start("\"C:\\Users\\Mhmmad\\source\\Hotel\"");
         }
     }
 }

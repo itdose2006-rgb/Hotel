@@ -43,15 +43,7 @@ namespace Hotel
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-     
-
-      
-
-      
-
-     
+        }   
        
 
         private void ch_Click(object sender, EventArgs e)
@@ -60,7 +52,7 @@ namespace Hotel
             {
                 txpass.UseSystemPasswordChar = true;
             }
-            else if (txpass.UseSystemPasswordChar = true)
+            else if (txpass.UseSystemPasswordChar == true)
             {
                 txpass.UseSystemPasswordChar = false;
             }
@@ -103,8 +95,8 @@ namespace Hotel
                     if (admin == "1")
                     {
                         System.Windows.MessageBox.Show("مرحبا بك يامدير" + n, "Admin", MessageBoxButton.OK);
-                        home homeForm = new home();
-                        homeForm.Show();
+                        home homeFo = new home();
+                        homeFo.Show();
 
 
 

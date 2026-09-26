@@ -124,5 +124,63 @@ namespace Hotel
                 cn.Close();
             }
         }
+
+        private void buprint_Click(object sender, EventArgs e)
+        {
+
+
+        
+                // نافذة لاختيار مكان واسم وحفظ الملف
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Text File (*.txt)|*.txt|CSV File (*.csv)|*.csv";
+                sfd.Title = "حفظ تقرير الغرف";
+                sfd.FileName = "Room_Report";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        cn.Open();
+                        SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM room1", cn);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+                        // كتابة أسماء الأعمدة في الأعلى
+                        for (int i = 0; i < dt.Columns.Count; i++)
+                        {
+                            sb.Append(dt.Columns[i].ColumnName + (i == dt.Columns.Count - 1 ? "" : ","));
+                        }
+                        sb.AppendLine();
+
+                        // كتابة بيانات كل صف
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            for (int i = 0; i < dt.Columns.Count; i++)
+                            {
+                                sb.Append(row[i].ToString() + (i == dt.Columns.Count - 1 ? "" : ","));
+                            }
+                            sb.AppendLine();
+                        }
+
+                        // حفظ الملف في المسار الذي اختاره المستخدم
+                        System.IO.File.WriteAllText(sfd.FileName, sb.ToString(), System.Text.Encoding.UTF8);
+
+                        MessageBox.Show("تم حفظ التقرير بنجاح!", "التقرير", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        cn.Close();
+                    }
+                }
+            
+
+
+        }
     }
 }

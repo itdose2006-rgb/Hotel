@@ -630,6 +630,7 @@
             this.buprint.Size = new System.Drawing.Size(156, 44);
             this.buprint.TabIndex = 7;
             this.buprint.Text = "طبعة تقرير";
+            this.buprint.Click += new System.EventHandler(this.buprint_Click);
             // 
             // propertiesroom
             // 
